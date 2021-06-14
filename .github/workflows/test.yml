@@ -25,3 +25,5 @@ jobs:
           ${{ runner.os }}-
     - name: Install dependencies
       run: pip install -r tests/requirements.txt
+    - name: Verify examples/station_information.json
+      run: jsonschema station_information.json -i examples/station_information.json
